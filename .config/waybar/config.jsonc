@@ -1,0 +1,117 @@
+{
+    "margin-top": 3,
+    "margin-left": 3,
+    "margin-right": 3,
+    "height": 30,
+    "spacing": 5,
+    "modules-left": [
+        "clock",
+	"mpris"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "power-profiles-daemon",
+        "battery",
+        "custom/power"
+    ],
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%Y-%m-%d}"
+    },
+    "battery": {
+        "states": {
+            "warning": 30,
+            "critical": 15
+        },
+        "format": "{capacity}% <span color='#89b4fa'>{icon}</span>",
+        "format-full": "{capacity}% <span color='#89b4fa'>{icon}</span>",
+        "format-charging": "{capacity}% <span color='#a6e3a1'>󰃨</span>",
+        "format-plugged": "{capacity}% <span color='#a6e3a1'></span>",
+        "format-alt": "{time} {icon}",
+        "format-icons": ["", "", "", "", ""]
+    },
+    "power-profiles-daemon": {
+      "format": "{icon}",
+      "tooltip-format": "Power profile: {profile}\nDriver: {driver}",
+      "tooltip": true,
+      "format-icons": {
+        "default": "<span color='#f38ba8'></span>",
+        "performance": "<span color='#f38ba8'></span>",
+        "balanced": "<span color='#74c7ec'></span>",
+        "power-saver": "<span color='#a6e3a1'></span>"
+      }
+    },
+    "network": {
+        "format-wifi": "<span color='#f9e2af'></span>  {essid}",
+        "format-ethernet": "<span color='#f9e2af'>󰊗</span>",
+        "tooltip-format": "{ifname} via {gwaddr} 󰊗",
+        "format-linked": "{ifname} (No IP) 󰊗",
+        "format-disconnected": "<span color='#eba0ac'>⚠</span>  Disconnected",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        "format": "{volume}% <span color='#f2cdcd'>{icon}</span>",
+        "format-bluetooth": "{volume}% <span color='#f2cdcd'>{icon}</span>",
+        "format-bluetooth-muted": "{volume}% <span color='#eba0ac'>󰅶 </span>",
+        "format-muted": "{volume}% <span color='#eba0ac'>󰅶</span>",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "󰂑",
+            "headset": "󰂑",
+            "phone": "",
+            "portable": "",
+            "car": "",
+            "default": ["", "", ""]
+        },
+        "on-click": "pavucontrol"
+    },
+    "mpris": {
+	"format": "<b>{player}</b>: <span color='#f5e0dc'>{player_icon}</span> {title} - {artist} - {length}",
+	"format-paused": "<b>{player}</b>: <span color='#f5e0dc'>{status_icon}</span> - <i>{title} - {artist} - {length}</i>",
+	"player-icons": {
+		"default": "⏸",
+		"mpv": "⏸"
+	},
+	"status-icons": {
+		"paused": "▶"
+	},
+	"ignored-players": ["chromium"]
+    },
+    "custom/power": {
+        "format" : "<span color='#cba6f7'>⏻</span>",
+		"tooltip": false,
+		"menu": "on-click",
+		"menu-file": "$HOME/.config/waybar/power_menu.xml", // Menu file in resources folder
+		"menu-actions": {
+			"exithyprland": "hyprctl dispatch exit",
+			"logout": "hyprlock",
+			"shutdown": "systemctl poweroff",
+			"reboot": "systemctl reboot"
+		}
+    },
+    "hyprland/workspaces": {
+  "format": "{icon}",
+  "on-click": "activate",
+  "format-icons": {
+    "1": "<span color= '#f5c2e7'></span>",
+    "2": "<span color= '#a6e3a1'></span>",
+    "3": "<span color= '#f9e2af'></span>",
+    "4": "<span color= '#cba6f7'></span>",
+    "5": "<span color= '#f2cdcd'></span>",
+    "6": "<span color= '#89b4fa'></span>",
+    "7": "<span color= '#cba6f7'></span>",
+    "8": "<span color= '#eba0ac'></span>",
+    "9": "<span color= '#94e2d5'></span>",
+    "10": "<span color= '#b4befe'></span>",
+    "urgent": "<span color= '#f38ba8'></span>",
+    "default": ""
+  },
+  "sort-by-number": true
+}
+}

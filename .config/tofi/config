@@ -1,0 +1,18 @@
+prompt-text = "> "
+
+text-color = #cdd6f4
+prompt-color = #e9b492
+selection-color = #f38ba8
+background-color = #1e1e2e
+
+width = 100%
+padding-left = 35%
+padding-top = 30%
+height = 100%
+border-width = 0
+outline-width = 0
+result-spacing = 14
+num-results = 8
+font = Cantarell
+font-variations = "wght 600"
+font-size = 24
