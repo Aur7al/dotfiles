@@ -3,11 +3,11 @@
 Personal Dotfiles
 
 Distro: `Arch Linux`  
-WM: `Hyprland, dwm`  
-Terminal: `Kitty, st`  
-Fetch: `Neofetch`  
+WM: `dwm, hyprland`  
+Terminal: `kitty, st`  
+Fetch: `neofetch`  
 Launcher: `tofi`  
-Bar: `Waybar`  
-File Manager: `Yazi`  
-Music Player: `Subtui`  
+Bar: `waybar`  
+File Manager: `yazi`  
+Music Player: `subtui`  
 Theme: `Catppuccin Mocha`  

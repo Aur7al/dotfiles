@@ -6,5 +6,5 @@ play = [
 	{ run = "mpv %s", orphan = true, for = "unix" },
 ]
 edit = [
-	{ run = "nvim %s", block = true, for = "unix" },
+	{ run = "vim %s", block = true, for = "unix" },
 ]

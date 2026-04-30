@@ -1,0 +1,10 @@
+[mgr]
+show_hidden = true
+
+[opener]
+play = [
+	{ run = "mpv %s", orphan = true, for = "unix" },
+]
+edit = [
+	{ run = "vim %s", block = true, for = "unix" },
+]
