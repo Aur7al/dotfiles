@@ -1,0 +1,17 @@
+#
+# ~/.bashrc
+#
+
+# If not running interactively, don't do anything
+[[ $- != *i* ]] && return
+
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias cwm='vim ~/dwm/config.h'
+alias mwm='cd ~/dwm; sudo make clean install; cd -'
+alias vol='wpctl get-volume @DEFAULT_AUDIO_SINK@'
+alias bright='brightnessctl | grep %'
+alias bat='cat /sys/class/power_supply/BAT0/capacity'
+alias theme='~/Files/Wallpapers/Themes/apply.sh'
+
+export PS1="\n\[\e[37m\]\w\n\[\e[38;5;213m\]❯\[\e[0m\] "
